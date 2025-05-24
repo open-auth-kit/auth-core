@@ -1,0 +1,8 @@
+{
+  "entryPoints": ["src/index.ts"],
+  "tsconfig": "tsconfig.cjs.json",
+  "out": "docs/en",
+  "plugin": ["typedoc-plugin-markdown"],
+  "hideGenerator": true,
+  "includeVersion": true
+}
