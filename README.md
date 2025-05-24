@@ -33,3 +33,42 @@
 | ✅ Dual-publish (CJS + ESM) & full TypeDoc API | |
 
 ---
+
+## Installation
+
+```bash
+pnpm add @open-auth-kit/auth-core
+```
+
+## Usage
+
+Register the module synchronously or asynchronously in your Nest application:
+
+```ts
+import { Module } from '@nestjs/common';
+import { AuthCoreModule } from '@open-auth-kit/auth-core';
+
+@Module({
+  imports: [
+    AuthCoreModule.forRoot({
+      publicKey: '-----BEGIN PUBLIC KEY-----\n...\n-----END PUBLIC KEY-----',
+    }),
+  ],
+})
+export class AppModule {}
+```
+
+For asynchronous setup, use `forRootAsync()` and provide a factory returning
+`JwtCoreOptions`.
+
+## Building and testing
+
+```bash
+pnpm install
+pnpm lint
+pnpm test
+pnpm build
+```
+
+---
+
